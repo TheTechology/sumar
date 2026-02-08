@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Workflow Hub (demo) — Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Workflow Hub (demo)</span>
+        <span class="brand__role">form → validare → pipeline → raportare</span>
+      </a>
+      <div class="actions">
+        <a class="btn btn--ghost" href="index.html">Înapoi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section__head">
+        <h2 class="h2">Rezumat</h2>
+        <p class="muted">
+          Proiect demonstrativ creat pentru a evidenția modul meu de lucru: flux, integrări, documentare, control.
+          Model util pentru procese operaționale (cereri interne, aprobare, status, raport).
+        </p>
+      </div>
+
+      <div class="grid3">
+        <div class="box">
+          <div class="box__t">Problemă</div>
+          <div class="box__p">Informația se pierde între echipe. Cererile nu au status clar și nu există trasabilitate.</div>
+        </div>
+        <div class="box">
+          <div class="box__t">Soluție</div>
+          <div class="box__p">Un flux standard: formular → validare → pipeline → notificări → raport săptămânal.</div>
+        </div>
+        <div class="box">
+          <div class="box__t">Rezultat</div>
+          <div class="box__p">Trasabilitate, claritate, control versiuni, timp mai puțin pierdut în follow-up.</div>
+        </div>
+      </div>
+
+      <div class="section__head" style="margin-top:14px">
+        <h2 class="h2">Integrations (exemplu)</h2>
+        <p class="muted">Aici se vede “ce e în spate”, nu doar UI.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="job">
+          <div class="job__top">
+            <div>
+              <div class="job__role">Form + Validation</div>
+              <div class="job__meta">formular standard + reguli minime (nume, proiect, prioritate, atașamente)</div>
+            </div>
+            <div class="job__pill">UI</div>
+          </div>
+          <ul class="bullets">
+            <li>Validare câmpuri + anti-duplicate.</li>
+            <li>Generare ID cerere (ex: OPS-2026-00012).</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <div>
+              <div class="job__role">Webhook → Google Sheets</div>
+              <div class="job__meta">înregistrare automată în tabel + status + owner</div>
+            </div>
+            <div class="job__pill">DATA</div>
+          </div>
+          <ul class="bullets">
+            <li>Pipeline: New → In review → Approved → Done.</li>
+            <li>Audit trail: timestamp + cine a schimbat statusul.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <div>
+              <div class="job__role">Email Notifications</div>
+              <div class="job__meta">notificări automate către owner / management</div>
+            </div>
+            <div class="job__pill">ALERTS</div>
+          </div>
+          <ul class="bullets">
+            <li>Confirmare cerere + SLA estimat.</li>
+            <li>Notificare la schimbare de status.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job__top">
+            <div>
+              <div class="job__role">Weekly Report (PDF)</div>
+              <div class="job__meta">raport simplu: KPI, cereri blocate, top priorități</div>
+            </div>
+            <div class="job__pill">REPORT</div>
+          </div>
+          <ul class="bullets">
+            <li>Export PDF pentru management.</li>
+            <li>Listă blocaje + acțiuni.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section__head" style="margin-top:14px">
+        <h2 class="h2">Architecture (schemă)</h2>
+        <p class="muted">Schemă simplă, exact ce vrea managementul să înțeleagă.</p>
+      </div>
+
+      <div class="card">
+        <svg viewBox="0 0 1100 240" width="100%" height="240" role="img" aria-label="Architecture diagram">
+          <defs>
+            <filter id="s" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="rgba(15,23,42,.12)"/>
+            </filter>
+          </defs>
+
+          <rect x="30" y="50" width="240" height="90" rx="16" fill="#ffffff" stroke="#e2e8f0" filter="url(#s)"/>
+          <text x="60" y="90" font-family="Inter" font-size="16" font-weight="800" fill="#0f172a">Form UI</text>
+          <text x="60" y="115" font-family="Inter" font-size="13" font-weight="600" fill="#475569">Validation + ID</text>
+
+          <rect x="320" y="50" width="260" height="90" rx="16" fill="#ffffff" stroke="#e2e8f0" filter="url(#s)"/>
+          <text x="350" y="90" font-family="Inter" font-size="16" font-weight="800" fill="#0f172a">Webhook Handler</text>
+          <text x="350" y="115" font-family="Inter" font-size="13" font-weight="600" fill="#475569">Rules + Routing</text>
+
+          <rect x="630" y="30" width="210" height="80" rx="16" fill="#ffffff" stroke="#e2e8f0" filter="url(#s)"/>
+          <text x="655" y="70" font-family="Inter" font-size="16" font-weight="800" fill="#0f172a">Google Sheets</text>
+          <text x="655" y="92" font-family="Inter" font-size="13" font-weight="600" fill="#475569">DB (audit)</text>
+
+          <rect x="630" y="130" width="210" height="80" rx="16" fill="#ffffff" stroke="#e2e8f0" filter="url(#s)"/>
+          <text x="655" y="170" font-family="Inter" font-size="16" font-weight="800" fill="#0f172a">Email / Alerts</text>
+          <text x="655" y="192" font-family="Inter" font-size="13" font-weight="600" fill="#475569">Owner + Mgmt</text>
+
+          <rect x="890" y="80" width="180" height="80" rx="16" fill="#ffffff" stroke="#e2e8f0" filter="url(#s)"/>
+          <text x="915" y="120" font-family="Inter" font-size="16" font-weight="800" fill="#0f172a">Weekly PDF</text>
+          <text x="915" y="142" font-family="Inter" font-size="13" font-weight="600" fill="#475569">KPI + Risks</text>
+
+          <path d="M270 95 L320 95" stroke="#94a3b8" stroke-width="3" />
+          <path d="M580 95 L630 70" stroke="#94a3b8" stroke-width="3" />
+          <path d="M580 95 L630 170" stroke="#94a3b8" stroke-width="3" />
+          <path d="M840 70 L890 120" stroke="#94a3b8" stroke-width="3" />
+        </svg>
+      </div>
+
+      <div class="note" style="margin-top:12px">
+        <strong>Link-uri:</strong>
+        <div style="margin-top:8px; line-height:1.7">
+          • Demo: <em>(pune aici link când îl publici)</em><br/>
+          • Repo: <em>(pune link GitHub)</em><br/>
+          • Documentație: <em>(pune link Notion/Google Doc dacă vrei)</em>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
