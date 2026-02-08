@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marian Dumitru — CV (IT • Digitalizare • Management • Comunicare)</title>
+  <meta name="description" content="CV sumar: IT, digitalizare, management, comunicare. Experiență în procese, livrabile, presiune, integrare soluții și documentare." />
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- PDF libs -->
+  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__title">Marian Dumitru</div>
+        <div class="brand__subtitle">IT • Digitalizare • Management • Comunicare</div>
+      </div>
+
+      <nav class="topbar__actions">
+        <a class="btn btn--ghost" href="projects/index.html">Portofoliu</a>
+        <button class="btn btn--primary" id="btnDownloadPdf" type="button">Download PDF</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- CV area (this is what we export to PDF) -->
+    <section id="cv" class="card">
+      <div class="cvHeader">
+        <div>
+          <h1 class="h1">Marian Dumitru</h1>
+          <p class="muted">
+            Profil orientat pe <strong>ordine în procese</strong>, <strong>documentare</strong>, <strong>fluxuri clare</strong> și <strong>comunicare eficientă</strong>
+            între echipe (birou ↔ operațional). Obișnuit cu livrabile, termene, presiune și standarde.
+          </p>
+        </div>
+        <div class="cvContacts">
+          <!-- Editează datele dacă vrei -->
+          <div><span class="tag">România</span></div>
+          <div><strong>Telefon:</strong> <a href="tel:+40752130020">0752 130 020</a></div>
+          <div><strong>Email:</strong> <a href="mailto:thetechologyhub@gmail.com">thetechologyhub@gmail.com</a></div>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/mariandumitruro/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/TheTechology" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dot">•</span>
+            <a href="https://cvmariandumitru.netlify.app/" target="_blank" rel="noreferrer">CV online (sursă)</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <div class="grid grid--2">
+        <div>
+          <h2 class="h2">Ce aduc (pe limba operațională)</h2>
+          <ul class="list">
+            <li><strong>Digitalizare & ordine:</strong> structurare fișiere, documente, raportări, șabloane, nomenclatoare.</li>
+            <li><strong>Flux de lucru:</strong> definire pași, roluri, responsabilități, verificări, “cine aprobă ce”.</li>
+            <li><strong>Comunicare & claritate:</strong> brief-uri scurte, statusuri, minute, decizii urmărite.</li>
+            <li><strong>Integrare soluții:</strong> tool-uri simple (trackere, formulare, dashboard-uri) fără “complicat”.</li>
+            <li><strong>Presiune & livrabile:</strong> orientat pe rezultat, priorizare, disciplină de execuție.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="h2">Competențe cheie</h2>
+          <div class="chips">
+            <span class="chip">Documentare & QA</span>
+            <span class="chip">Proces & disciplină</span>
+            <span class="chip">Coordonare taskuri</span>
+            <span class="chip">Stakeholder management</span>
+            <span class="chip">Jira / Trello / Slack</span>
+            <span class="chip">Web / integrare</span>
+            <span class="chip">Training & onboarding</span>
+            <span class="chip">Raportare & KPI</span>
+          </div>
+
+          <h2 class="h2 mt">Tehnologii (selectiv)</h2>
+          <p class="muted small">
+            HTML/CSS/JS • PHP • MySQL • Ubuntu/Apache • Git/GitHub • Bitrix • Magento • Mailchimp
+          </p>
+        </div>
+      </div>
+
+      <hr class="sep" />
+
+      <h2 class="h2">Experiență (sumar, orientat pe impact)</h2>
+
+      <div class="timeline">
+        <article class="role">
+          <div class="role__head">
+            <h3 class="h3">BCR — IT Specialist</h3>
+            <div class="muted small">2006 – 2025 • mediu structurat • procese • standarde</div>
+          </div>
+          <ul class="list">
+            <li>Lucru în medii cu <strong>proceduri</strong>, <strong>documentare</strong> și <strong>verificări</strong>.</li>
+            <li>Comunicare clară cu părți diferite (utilizatori, management, echipe tehnice).</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role__head">
+            <h3 class="h3">Mage Check SRL — Bitrix Expert (implementări & mentenanță)</h3>
+            <div class="muted small">2019 – 2025 • proiecte • task tracking • livrabile</div>
+          </div>
+          <ul class="list">
+            <li>Implementări web + mentenanță cu accent pe <strong>consistență</strong> și <strong>testare practică</strong>.</li>
+            <li>Lucru cu Jira/Trello/Slack, execuție pe taskuri și prioritizare.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role__head">
+            <h3 class="h3">Asociația Grupul Verde — coordonare programe & comunicare</h3>
+            <div class="muted small">2020 – 2025 • educație tech • proiecte • comunități</div>
+          </div>
+          <ul class="list">
+            <li>Coordonare activități cu echipe, voluntari și parteneri; <strong>planificare</strong>, <strong>raportare</strong>, <strong>comunicare</strong>.</li>
+            <li>Materiale, pagini web, integrare formulare, structurare conținut, livrabile la termen.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role__head">
+            <h3 class="h3">Mentor / Trainer — feedback structurat & instruire</h3>
+            <div class="muted small">2021 – 2025 • training • explicații step-by-step</div>
+          </div>
+          <ul class="list">
+            <li>Onboarding, ghiduri, verificare calitate, claritate în comunicare.</li>
+          </ul>
+        </article>
+      </div>
+
+      <hr class="sep" />
+
+      <div class="grid grid--2">
+        <div>
+          <h2 class="h2">Tip de rol potrivit (UMB / operațional)</h2>
+          <ul class="list">
+            <li>Digital Process / IT Coordinator</li>
+            <li>IT & Operations Support</li>
+            <li>Project Support (IT + comunicare + raportare)</li>
+            <li>Digital Transformation Assistant (practic, fără “buzzwords”)</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="h2">Disponibilitate</h2>
+          <p class="muted">
+            Disponibil pentru discuție scurtă și pentru a începe cu audit rapid (1–2 săptămâni):
+            mapare fluxuri, documente, instrumente, propunere plan realist.
+          </p>
+        </div>
+      </div>
+
+      <div class="cvFooter">
+        <button class="btn btn--secondary" id="btnPrint" type="button">Print (fallback PDF)</button>
+        <span class="muted small">Tip: “Download PDF” generează fișier PDF din această pagină.</span>
+      </div>
+    </section>
+
+    <!-- Portfolio preview on homepage -->
+    <section class="card">
+      <div class="sectionHead">
+        <h2 class="h2">Portofoliu (click → proiect)</h2>
+        <a class="link" href="projects/index.html">Vezi toate →</a>
+      </div>
+
+      <div class="cards">
+        <a class="pCard" href="projects/air-quality-adjud.html">
+          <div class="pCard__title">Monitorizare calitatea aerului (Adjud)</div>
+          <div class="pCard__meta">Site demo • date • structură • comunicare publică</div>
+        </a>
+
+        <a class="pCard" href="projects/aquakit.html">
+          <div class="pCard__title">AquaKit — citizen science (educație + măsurători)</div>
+          <div class="pCard__meta">Procese • coordonare • materiale • parteneri</div>
+        </a>
+
+        <a class="pCard" href="projects/wordpress-seo.html">
+          <div class="pCard__title">WordPress / SEO / implementări</div>
+          <div class="pCard__meta">Audit • optimizare • mentenanță • livrabile</div>
+        </a>
+
+        <a class="pCard" href="projects/ai-management-agent.html">
+          <div class="pCard__title">AI Management Agent (automatizări)</div>
+          <div class="pCard__meta">Workflow • integrare • reducere timp</div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted small">© <span id="year"></span> Marian Dumitru • CV HTML + PDF Export</span>
+    </footer>
+  </main>
+</body>
+</html>
