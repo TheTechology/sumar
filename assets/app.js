@@ -1,75 +1,71 @@
-function $(sel){ return document.querySelector(sel); }
+function $(s){ return document.querySelector(s); }
 
 function setYear(){
-  const y = new Date().getFullYear();
   const el = $("#year");
-  if(el) el.textContent = String(y);
+  if(el) el.textContent = String(new Date().getFullYear());
 }
 
-async function downloadPdfFromCv(){
-  const cv = $("#cv");
-  const btn = $("#btnDownloadPdf");
-  if(!cv) return;
+async function exportPdf(){
+  const target = $("#cvRoot"); // exportăm cardul din dreapta (curat și scurt)
+  const btn = $("#btnPdf");
+  if(!target) return;
 
-  const originalText = btn ? btn.textContent : "";
-  if(btn){
-    btn.disabled = true;
-    btn.textContent = "Generez PDF…";
-  }
+  const old = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "Generez PDF…";
 
   try{
-    const canvas = await html2canvas(cv, {
-      scale: 2,
+    const canvas = await html2canvas(target, {
+      scale: 2.2,
       useCORS: true,
-      backgroundColor: "#0b0f14",
-      windowWidth: document.documentElement.clientWidth
+      backgroundColor: "#ffffff"
     });
 
     const imgData = canvas.toDataURL("image/png");
     const { jsPDF } = window.jspdf;
 
-    // A4 in pt
     const pdf = new jsPDF("p", "pt", "a4");
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
 
-    // Fit image to A4 width, keep ratio
-    const imgWidth = pageWidth;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    const margin = 36;
+    const usableW = pageW - margin*2;
 
-    let heightLeft = imgHeight;
-    let position = 0;
+    const imgW = usableW;
+    const imgH = (canvas.height * imgW) / canvas.width;
 
-    pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-    heightLeft -= pageHeight;
+    let y = margin;
+    if(imgH <= pageH - margin*2){
+      pdf.addImage(imgData, "PNG", margin, y, imgW, imgH);
+    } else {
+      // dacă depășește, îl spargem pe pagini
+      let heightLeft = imgH;
+      let pos = margin;
 
-    while(heightLeft > 10){
-      position -= pageHeight;
-      pdf.addPage();
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
+      pdf.addImage(imgData, "PNG", margin, pos, imgW, imgH);
+      heightLeft -= (pageH - margin*2);
+
+      while(heightLeft > 0){
+        pdf.addPage();
+        pos = margin - (imgH - heightLeft);
+        pdf.addImage(imgData, "PNG", margin, pos, imgW, imgH);
+        heightLeft -= (pageH - margin*2);
+      }
     }
 
-    pdf.save("Marian-Dumitru-CV-IT-Digitalizare.pdf");
-  } catch(err){
-    console.error(err);
-    alert("Nu am putut genera PDF. Folosește Print (fallback) sau încearcă în Chrome.");
+    pdf.save("Marian-Dumitru-CV.pdf");
+  } catch(e){
+    console.error(e);
+    alert("Nu am putut genera PDF. Folosește Print → Save as PDF ca fallback.");
+    window.print();
   } finally{
-    if(btn){
-      btn.disabled = false;
-      btn.textContent = originalText;
-    }
+    btn.disabled = false;
+    btn.textContent = old;
   }
 }
 
-function init(){
+document.addEventListener("DOMContentLoaded", () => {
   setYear();
-
-  const btnPdf = $("#btnDownloadPdf");
-  if(btnPdf) btnPdf.addEventListener("click", downloadPdfFromCv);
-
-  const btnPrint = $("#btnPrint");
-  if(btnPrint) btnPrint.addEventListener("click", () => window.print());
-}
-
-document.addEventListener("DOMContentLoaded", init);
+  const btn = $("#btnPdf");
+  if(btn) btn.addEventListener("click", exportPdf);
+});
