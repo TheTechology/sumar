@@ -3,298 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Marian Dumitru — IT • Digitalizare • Management • Comunicare</title>
-  <meta name="description" content="CV profesional (sumar) + portofoliu: IT, digitalizare, management, comunicare. Focus pe fluxuri, livrabile, presiune, integrare soluții, documentare." />
-
+  <title>Portofoliu — Marian Dumitru</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- PDF export -->
-  <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
-  <script defer src="assets/app.js"></script>
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="#top">
-        <span class="brand__name">Marian Dumitru</span>
-        <span class="brand__role">IT • Digitalizare • Management • Comunicare</span>
+      <a class="brand" href="../index.html">
+        <span class="brand__name">Portofoliu</span>
+        <span class="brand__role">Case studies • integrări • arhitectură • livrabile</span>
       </a>
-
-      <nav class="nav">
-        <a class="nav__link" href="#profil">Profil</a>
-        <a class="nav__link" href="#expertiza">Expertiză</a>
-        <a class="nav__link" href="#experienta">Experiență</a>
-        <a class="nav__link" href="#portofoliu">Portofoliu</a>
-        <a class="nav__link" href="#contact">Contact</a>
-      </nav>
-
       <div class="actions">
-        <a class="btn btn--ghost" href="projects/index.html">Portofoliu (toate)</a>
-        <button class="btn btn--primary" id="btnPdf" type="button">Download PDF</button>
+        <a class="btn btn--ghost" href="../index.html">Înapoi la CV</a>
       </div>
     </div>
   </header>
 
-  <main id="top" class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__left">
-        <div class="badge">Disponibil • IT / Digitalizare / Suport management</div>
-        <h1 class="h1">
-          Digitalizare practică, fluxuri clare, livrabile la timp.
-        </h1>
-        <p class="lead" id="profil">
-          Sunt orientat pe <strong>ordine operațională</strong>: procese, documente, comunicare între echipe (birou ↔ teren),
-          instrumente simple și verificabile. Lucrez bine sub presiune, prioritizez corect și livrez fără „teatru”.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--secondary" href="#portofoliu">Vezi proiecte</a>
-          <a class="btn btn--ghost" href="#contact">Contact rapid</a>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <div class="stat__kpi">18+ ani</div>
-            <div class="stat__label">medii cu proceduri & responsabilitate</div>
-          </div>
-          <div class="stat">
-            <div class="stat__kpi">Proiecte</div>
-            <div class="stat__label">web, workflow, raportare, educație tech</div>
-          </div>
-          <div class="stat">
-            <div class="stat__kpi">Focus</div>
-            <div class="stat__label">claritate, disciplină, integrare</div>
-          </div>
-        </div>
-      </div>
-
-      <aside class="hero__card" id="cvRoot">
-        <div class="card">
-          <div class="card__top">
-            <div>
-              <div class="card__name">Marian Dumitru</div>
-              <div class="card__title">IT • Digitalizare • Management • Comunicare</div>
-            </div>
-            <div class="pill">România</div>
-          </div>
-
-          <div class="card__grid">
-            <div class="kv">
-              <div class="kv__k">Telefon</div>
-              <div class="kv__v"><a href="tel:+40752130020">0752 130 020</a></div>
-            </div>
-            <div class="kv">
-              <div class="kv__k">Email</div>
-              <div class="kv__v"><a href="mailto:office@grupulverde.ro">office@grupulverde.ro</a></div>
-            </div>
-            <div class="kv">
-              <div class="kv__k">GitHub</div>
-              <div class="kv__v"><a href="https://github.com/" target="_blank" rel="noreferrer">Profil / repo</a></div>
-            </div>
-            <div class="kv">
-              <div class="kv__k">CV (sursă)</div>
-              <div class="kv__v"><a href="https://cvmariandumitru.netlify.app/" target="_blank" rel="noreferrer">Netlify</a></div>
-            </div>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="mini">
-            <div class="mini__h">Cum aduc valoare (rapid)</div>
-            <ul class="mini__list">
-              <li><strong>Mapare flux</strong> (cine → ce → când → unde se validează).</li>
-              <li><strong>Ordine documente</strong> (șabloane, nomenclatoare, versiuni).</li>
-              <li><strong>Raportare</strong> (status scurt, KPI, risc/blocaje).</li>
-              <li><strong>Integrare tool-uri</strong> (formulare, trackere, dashboard-uri simple).</li>
-            </ul>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- EXPERTIZA -->
-    <section class="section" id="expertiza">
+  <main class="container">
+    <section class="section">
       <div class="section__head">
-        <h2 class="h2">Expertiză relevantă pentru operațional</h2>
-        <p class="muted">Fără buzzwords. Doar ce se poate verifica în livrabile.</p>
-      </div>
-
-      <div class="grid3">
-        <div class="box">
-          <div class="box__t">Digitalizare & fluxuri</div>
-          <div class="box__p">Structură, proceduri, trackere, documentare, control versiuni, responsabilități.</div>
-          <div class="tags">
-            <span class="tag">process mapping</span><span class="tag">SOP</span><span class="tag">templates</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="box__t">Management & livrare</div>
-          <div class="box__p">Planificare, prioritizare, deadline-uri, statusuri, escaladare blocaje, disciplină.</div>
-          <div class="tags">
-            <span class="tag">delivery</span><span class="tag">KPI</span><span class="tag">risk</span>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="box__t">Comunicare “clară”</div>
-          <div class="box__p">Brief-uri scurte, minute, cerințe, checklists, comunicare între echipe.</div>
-          <div class="tags">
-            <span class="tag">stakeholders</span><span class="tag">minutes</span><span class="tag">checklists</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENȚĂ -->
-    <section class="section" id="experienta">
-      <div class="section__head">
-        <h2 class="h2">Experiență (sumar, orientat pe impact)</h2>
-        <p class="muted">Am păstrat scurt și „pe rezultate”.</p>
-      </div>
-
-      <div class="timeline">
-        <article class="job">
-          <div class="job__top">
-            <div>
-              <div class="job__role">BCR — IT Specialist</div>
-              <div class="job__meta">2006–2025 • medii cu proceduri, responsabilitate, auditabilitate</div>
-            </div>
-            <div class="job__pill">Procese • standarde</div>
-          </div>
-          <ul class="bullets">
-            <li>Lucru în medii cu <strong>proceduri</strong>, <strong>documentare</strong>, <strong>verificări</strong> și escaladare.</li>
-            <li>Comunicare cu utilizatori + management, claritate în cerințe și execuție.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__top">
-            <div>
-              <div class="job__role">Mage Check SRL — Implementări web / Bitrix / mentenanță</div>
-              <div class="job__meta">2019–2025 • taskuri, livrabile, fixuri, integrare</div>
-            </div>
-            <div class="job__pill">Livrare • QA</div>
-          </div>
-          <ul class="bullets">
-            <li>Workflow: cerințe → execuție → test → livrare → follow-up.</li>
-            <li>Instrumente: Jira / Trello / Slack • structură și disciplină în livrabile.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <div class="job__top">
-            <div>
-              <div class="job__role">Asociația Grupul Verde — coordonare programe & comunicare</div>
-              <div class="job__meta">2020–2025 • coordonare, parteneri, raportare, materiale</div>
-            </div>
-            <div class="job__pill">Coordonare</div>
-          </div>
-          <ul class="bullets">
-            <li>Planificare + calendar, coordonare echipe/voluntari, comunicare și raportare.</li>
-            <li>Livrabile digitale: pagini web, formulare, documente, șabloane, conținut structurat.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- PORTOFOLIU -->
-    <section class="section" id="portofoliu">
-      <div class="section__head">
-        <h2 class="h2">Portofoliu (case studies)</h2>
-        <p class="muted">Fiecare proiect are: context → ce am făcut → integrări → arhitectură → link demo.</p>
+        <h2 class="h2">Proiecte</h2>
+        <p class="muted">Click pe proiect. Vezi integrările, arhitectura, livrabilele și link-urile.</p>
       </div>
 
       <div class="grid2">
-        <a class="case" href="projects/adjud-air.html">
+        <a class="case" href="adjud-air.html">
           <div class="case__top">
             <div class="case__title">Calitatea aerului — Adjud</div>
-            <div class="case__meta">site public • structură • comunicare • livrare</div>
+            <div class="case__meta">site public • structură • SEO • livrare</div>
           </div>
           <div class="case__chips">
-            <span class="chip">Netlify</span><span class="chip">HTML/CSS/JS</span><span class="chip">SEO</span>
+            <span class="chip">Netlify</span><span class="chip">HTML/CSS/JS</span><span class="chip">Open Graph</span>
           </div>
-          <div class="case__more">Deschide case study →</div>
+          <div class="case__more">Deschide →</div>
         </a>
 
-        <a class="case" href="projects/workflow-hub.html">
+        <a class="case" href="workflow-hub.html">
           <div class="case__top">
             <div class="case__title">Workflow Hub (demo)</div>
-            <div class="case__meta">formular → pipeline → raportare</div>
+            <div class="case__meta">form → validare → pipeline → raport</div>
           </div>
           <div class="case__chips">
             <span class="chip">Webhooks</span><span class="chip">Sheets</span><span class="chip">Email</span>
           </div>
-          <div class="case__more">Deschide case study →</div>
+          <div class="case__more">Deschide →</div>
         </a>
 
-        <a class="case" href="projects/wordpress-seo.html">
+        <a class="case" href="wordpress-seo.html">
           <div class="case__top">
             <div class="case__title">WordPress / SEO / Integrări</div>
-            <div class="case__meta">audit → plan → execuție → rezultate</div>
+            <div class="case__meta">audit → implementare → monitorizare</div>
           </div>
           <div class="case__chips">
-            <span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">Analytics</span>
+            <span class="chip">WordPress</span><span class="chip">Elementor</span><span class="chip">GA4</span>
           </div>
-          <div class="case__more">Deschide case study →</div>
+          <div class="case__more">Deschide →</div>
         </a>
 
-        <a class="case" href="projects/ops-dashboard.html">
+        <a class="case" href="ops-dashboard.html">
           <div class="case__top">
             <div class="case__title">Ops Dashboard (demo)</div>
-            <div class="case__meta">status • KPI • riscuri • livrabile</div>
+            <div class="case__meta">KPI • status • risc • export PDF</div>
           </div>
           <div class="case__chips">
-            <span class="chip">Dashboard</span><span class="chip">KPI</span><span class="chip">PDF</span>
+            <span class="chip">Dashboard</span><span class="chip">PDF Export</span><span class="chip">Data model</span>
           </div>
-          <div class="case__more">Deschide case study →</div>
+          <div class="case__more">Deschide →</div>
         </a>
       </div>
-
-      <div class="note">
-        <strong>Notă:</strong> două proiecte sunt „demo” (create special pentru a arăta integrări și metodologie),
-        dar reflectă exact modul meu de lucru: flux, documentare, verificare, livrare.
-      </div>
     </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="contact">
-        <div>
-          <h2 class="h2">Contact</h2>
-          <p class="muted">
-            Dacă vrei o probă rapidă: pot livra în 7 zile un <strong>audit de flux</strong> + propunere de
-            <strong>organizare documente / raportare / tracker</strong> (simplu, verificabil).
-          </p>
-        </div>
-
-        <div class="contact__box">
-          <div class="kv2">
-            <div class="kv2__k">Telefon</div>
-            <div class="kv2__v"><a href="tel:+40752130020">0752 130 020</a></div>
-          </div>
-          <div class="kv2">
-            <div class="kv2__k">Email</div>
-            <div class="kv2__v"><a href="mailto:office@grupulverde.ro">office@grupulverde.ro</a></div>
-          </div>
-          <div class="kv2">
-            <div class="kv2__k">Portofoliu</div>
-            <div class="kv2__v"><a href="projects/index.html">projects/</a></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <span>© <span id="year"></span> Marian Dumitru • CV + Portofoliu</span>
-    </footer>
   </main>
 </body>
 </html>
